@@ -5,7 +5,6 @@ port of joystick, just change joy1dat into joy0dat.
 
 Should work with most asemblers. Usage 
 
-Usage
 		bsr	Joystick
 		lea	left(pc),a0
 		tst.b	(a0)+
@@ -16,6 +15,6 @@ Usage
 .right		tst.b	(a0)+
 		beq.b	.up
 
-		;right direction
+		right direction
 .up
-		;and so on...
+		and so on...
