@@ -11,12 +11,12 @@ Usage
 		tst.b	(a0)+
 		beq.b	.right
 
-		do something for left direction
+		;do something for left direction
 
 .right		tst.b	(a0)+
 		beq.b	.up
 
-		right direction
+		;right direction
 .up
-		and so on...
+		;and so on...
 ```
