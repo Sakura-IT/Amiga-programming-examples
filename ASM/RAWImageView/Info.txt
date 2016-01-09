@@ -1,0 +1,2 @@
+Proste programiki napisane przy uzyciu Asm-One wyswietlajace grafike z formatu RAW (czyste dane, bez zadnej kompresji, bez dodatkowych informacji, sam opis pixeli).
+Katalog RAW nalezy przekopiowac do RAM: (Ram Disk) lub w dowolne miejsce, ale w tedy nalezy odpowiednio zmienic scierzke w kodzie (incbin '...').
