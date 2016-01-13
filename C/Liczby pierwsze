@@ -1,4 +1,4 @@
-/*Program wypisuje kolejne liczby pierwsze w nieskończonsć*/
+/*Program wypisuje kolejne liczby pierwsze w nieskończonosć*/
 
 #include <stdio.h>
 
