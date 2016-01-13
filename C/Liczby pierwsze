@@ -1,0 +1,28 @@
+/*Program wypisuje kolejne liczby pierwsze w nieskończonsć*/
+
+#include <stdio.h>
+
+main()
+{
+int liczba=0, i, modulo, licznik=0; 
+int kwadrat;
+
+printf("Liczby pierwsze\n.");
+
+while(1)
+{
+liczba=liczba+1;
+
+for(i=1;i<=liczba;i=i+1)
+{
+modulo=liczba%i;
+if(modulo==0)
+licznik=licznik+1;
+}
+
+if(licznik==2)
+printf("\nLIczba pierwsza: %d",liczba);
+licznik=0;
+}
+return (0);
+}
