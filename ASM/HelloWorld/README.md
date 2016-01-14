@@ -1,7 +1,7 @@
 # HelloWorld
 
 Example of using Amiga OS functions from assembler. The whole example consists
-of 14 processor instructions and compiles to 128 bytes of executable.
+of 14 processor instructions and compiles to 128 bytes of executable. Article in Polish: http://krashan.ppa.pl/articles/amiga-asembler
 
 ### Key points
 
