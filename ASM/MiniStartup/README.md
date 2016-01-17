@@ -1,6 +1,6 @@
 # MiniStartup
 
-This example shows what has to be done at program startup, to have it working when started from Workbench (by clicking program icon). It is minimal startup, it only handles Workbench message.
+This example shows what has to be done at program startup, to have it working when started from Workbench (by clicking program icon). It is minimal startup, it only handles Workbench message. Article in Polish: http://teleinfo.pb.edu.pl/krashan/articles/amiga_asembler/odc002.html
 
 ### Key points
 
