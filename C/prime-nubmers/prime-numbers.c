@@ -1,28 +1,30 @@
-/*Program wypisuje kolejne liczby pierwsze w nieskończonosć*/
-
 #include <stdio.h>
 
-main()
+int
+main(int argc, char *argv[])
 {
-int liczba=0, i, modulo, licznik=0; 
-int kwadrat;
+	int number, i, modulo, counter, square;
 
-printf("Liczby pierwsze\n.");
+	number = 0;
+	counter = 0;
 
-while(1)
-{
-liczba=liczba+1;
+	printf("Prime numbers:\n");
 
-for(i=1;i<=liczba;i=i+1)
-{
-modulo=liczba%i;
-if(modulo==0)
-licznik=licznik+1;
+	while(1) {
+		number++;
+
+		for(i = 1; i <= number; i = i+1) {
+			modulo = number % i;
+			if(modulo == 0)
+				counter++;
+		}
+
+		if(counter == 2)
+			printf("%d\n", number);
+		
+		counter = 0;
+	}
+
+	return(0);
 }
 
-if(licznik==2)
-printf("\nLIczba pierwsza: %d",liczba);
-licznik=0;
-}
-return (0);
-}
