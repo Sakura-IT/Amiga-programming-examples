@@ -48,10 +48,11 @@ The function works the same as C function _printf()_, however variable arguments
 ### Resource allocation
 
 Any assembler program using the operating system has to allocate some resources before doing its job. These resources have to be obtained in specific order and freed in reverse order. Program also should gracefully exit if allocation of some resource fails. To make it easier I use a specific code writing strategy for resource allocation. Resource allocation section is written as a chain of subroutines. Each subroutine deals with one resource and contains both obtain and release code:
+
 1. Try to obtain the resource.
 2. Test for success.
 3. If resource failed, skip to 5.
 4. Call further program code as a subroutine.
 5. Free the resource.
-With this approach code for obtaining and releasing a resource is located in a single small fragment of code and usually written at the same time. Then resource leaks are avoided, also programs are stable and exit cleanly even if some resource is unobtainable. Adding error reporting and debugging the code are also easier.
 
+With this approach code for obtaining and releasing a resource is located in a single small fragment of code and usually written at the same time. Then resource leaks are avoided, also programs are stable and exit cleanly even if some resource is unobtainable. Adding error reporting and debugging the code are also easier.
