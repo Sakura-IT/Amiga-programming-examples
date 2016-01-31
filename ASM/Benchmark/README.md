@@ -35,7 +35,7 @@ Any of these can be also forced to be loaded into chip memory (which may be usef
 
 ### Accessing globals
 
-Any program usually has some global variables, accessed throughout the code. Typical example are library bases. The simplest way to access them is just to use absolute adressing mode. This has two disadvantages: absolute addressing mode makes instructions longer and thus slower, also, as Amiga uses dynamic memory management, each absolute mode adds relocation to the executable making it even more bigger.
+Any program usually has some global variables, accessed throughout the code. Typical example are library bases. The simplest way to access them is just to use absolute adressing mode. This has two disadvantages: absolute addressing mode makes instructions longer and thus slower, also, as Amiga uses dynamic memory management, each absolute mode access adds relocation to the executable making it even more bigger.
 
 A solution may be addressing relative to program counter (PC). This however forces global data to be located in code section, and more importantly PC relative addressing cannot be used as destination.
 
