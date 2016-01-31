@@ -24,6 +24,12 @@ Timer device provides _GetSysTime()_ function, which returns current time as set
 
 The example uses _SubTime()_ which subtracts two times stored as two 32-bit words. It takes care of carry between seconds and microseconds fields.
 
+### Measurement of execution time
+
+The idea is simple. Program gets the system time, stores it, executes benchmarked code, gets the system time again. Then calculates the difference and prints it out. Benchmarked code is executed inside _Forbid()_/_Permit()_ pair, so multitasking does not interfere.
+
+In the example a simple busyloop is benchmarked, which does 10 000 empty turns with DBF instruction. Note that for precise time measurements the test is too short (takes 3.6 msec even on 68020 @ 28 MHz). Recommended test time is around one second.
+
 ### Program sections
 
 Bigger programs are usually divided into sections. Amiga uses 3 basic types:
