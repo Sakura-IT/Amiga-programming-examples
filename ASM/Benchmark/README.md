@@ -14,7 +14,7 @@ Opening a device is more complicated process than opening a library. To open a d
 * creation of MessagePort with _CreateMsgPort()_.
 * creation of IORequest with _CreateIORequest()_ using this MessagePort.
 * opening of the device with _OpenDevice()_.
-* getting library base. Created IORequest after calling _OpenDevice()_contains pointer to Device structure, which is just extended Library structure. Address of it is the library base.
+* getting library base. Created IORequest after calling _OpenDevice()_ contains pointer to Device structure, which is just extended Library structure. Address of it is the library base.
 
 ### Getting system time
 
