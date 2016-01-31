@@ -177,7 +177,7 @@ OpenTimerDevice			MOVE.L	A2,-(SP)
 				MOVEQ	#0,D1
 				MOVEA.L	A1,A2
 				JSR	OpenDevice(A6)
-				TST.L	D0
+				TST.B	D0
 				BNE.S	DeviceFailed
 
 				MOVE.L	IO_DEVICE(A2),TimerBase(a4)
