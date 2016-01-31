@@ -230,7 +230,7 @@ PrintDiff			MOVEM.L	D2/A6,-(SP)
 				MOVE.L	#PFmt,D1
 				MOVE.L	#EndSeconds,D2
 				MOVEA.L	DosBase(A4),A6
-				JSR	Printf(A6)
+				JSR	VPrintf(A6)
 
 				MOVEM.L	(SP)+,D2/A6
 				RTS		
