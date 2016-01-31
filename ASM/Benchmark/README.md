@@ -30,6 +30,7 @@ Bigger programs are usually divided into sections. Amiga uses 3 basic types:
 * CODE contains executable code, it may however also coinatn data.
 * DATA is a section designed to store program data like strings and tables.
 * BSS is a section for data which are dynamically created by the program. Only size of this data is stored in the executable.
+
 Any of these can be also forced to be loaded into chip memory (which may be useful for graphics or audio data contained in the executable).
 
 ### Accessing globals
