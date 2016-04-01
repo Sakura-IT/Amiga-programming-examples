@@ -1,19 +1,6 @@
 ;
 ; Interleaved simple screen 320x256 16 colors (low resolution)
 ;
-; Interleaved screan mean that organization of lines is other then in normal
-; screen. So we have
-; 0 line of plane 0, 0 line of plane 1, 0 line of plane 2, 0 line of plane 3
-; 2 line of plane 0, 1 line of plane 2, 1 line of plane 2, 1 line of plane 3
-; ...
-; 255 line of plane 0, 255 line of plane 2, 255 line of plane 2, 255 line of plane 3
-;
-; In this approach we use modulo to hide lines from other planes. In this case
-; we must hide: 0 line of plane 1, 0 line of plane 2, 0 line of plane 3.
-;
-; This example just shows only black screen.
-; To exit just press left mouse button.
-;
 ;-----------------------------------------------------------------------------
 
 	INCDIR	"includes:"
