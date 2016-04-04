@@ -56,7 +56,7 @@ Program:
 		bsr.b	DoVariables
 		bsr.w	OpenGraphicsLibrary
 		beq.b	Exit
-		bsr.b	DisableOs
+		bsr.w	DisableOs
 		bsr.b	Main
 Quit:		bsr.w	EnableOs
 Exit:		bsr.w	CloseGraphicsLibrary
@@ -66,7 +66,7 @@ Exit:		bsr.w	CloseGraphicsLibrary
 ;-----------------------------------------------------------------------------
 Main:
 		bsr.w	Init
-		bsr	SetColors
+		bsr	ColorsSet
 		bsr	TileCopy
 
 Loop:		WAIT_BEAM
