@@ -1,0 +1,6 @@
+export CC=amiga-gcc
+export CXX=amiga-g++
+export AR=amiga-ar
+
+export PATH=/opt/amiga/bin:$PATH
+hash -r
