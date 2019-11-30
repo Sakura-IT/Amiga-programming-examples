@@ -1,0 +1,32 @@
+#!/bin/bash
+#
+# This script filters certain parameters from the commandline
+# for gcc/g++ which are not supported by the cross compiler toolchain
+# but are used by CMake
+#
+
+M68K_EXE=`basename $1 | cut -d"-" -f2`
+
+COMPILER=`echo "$1" | egrep "g++|-gcc"`
+
+if [[ ! -z "$COMPILER" ]]
+then
+	COMPILER="1"
+fi
+
+#echo "COMMAND: $@"
+shift
+
+
+if [[ "${COMPILER}" = "1" ]]
+then
+	for arg
+	do
+		shift
+		[ "$arg" = "-Wl,--enable-auto-import" ] && continue
+		[ "$arg" = "-Wl,--major-image-version,0,--minor-image-version,0" ] && continue
+		set -- "$@" "$arg"
+	done
+fi
+
+m68k-amigaos-${M68K_EXE} $@

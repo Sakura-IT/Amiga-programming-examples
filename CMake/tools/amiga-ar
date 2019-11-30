@@ -1,0 +1,3 @@
+#!/bin/bash
+
+amiga-executable $0 $@
