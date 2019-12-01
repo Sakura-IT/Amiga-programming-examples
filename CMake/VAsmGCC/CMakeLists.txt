@@ -1,10 +1,12 @@
 cmake_minimum_required(VERSION 3.14)
-project(VASMGcc C ASM)
 
 set(UTILSLIB_PATH "${CMAKE_SOURCE_DIR}/.." CACHE STRING "Path to lib")
 set (UTILSLIB_DIR "${UTILSLIB_PATH}/utilslib") 
 set (CMAKE_MODULE_PATH "${CMAKE_MODULE_PATH};${UTILSLIB_DIR}/CMake") 
 include(AmigaCompilerOptions) 
+
+# **** PROJECT START ****
+project(VASMGcc C ASM)
 
 set(TARGET ${PROJECT_NAME}) 
 
