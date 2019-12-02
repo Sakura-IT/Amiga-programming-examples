@@ -1,4 +1,4 @@
-cmake_minimum_required(VERSION 3.14)
+cmake_minimum_required(VERSION 3.10)
 
 set(UTILSLIB_PATH "${CMAKE_SOURCE_DIR}/..")
 set(UTILSLIB_DIR "${UTILSLIB_PATH}/utilslib")
