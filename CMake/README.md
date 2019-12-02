@@ -18,3 +18,16 @@ This project is a sample to show how to mix assembler and C/C++ objects in a sin
 The assembler part is built as a seperate static library in CMake and linked to your executable, so you canuse the same approach for creatig asm libraries as well.
 
 Have fun with assembler :-).
+
+
+### Example
+
+```
+git clone https://github.com/skeetor/Amiga-programming-examples
+export PATH=<MYPATH>/Amiga-programming-examples/CMake/tools:$PATH
+. amiga-env
+cd Amiga-programming-examples/CMake/VasmGCC
+cmake . -B build-release
+cd build-release
+make
+```
