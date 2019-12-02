@@ -1,5 +1,3 @@
-cmake_minimum_required(VERSION 3.14)
-
 # This is required to fix the archiver for cross compiling.
 # This workaround is a problem in CMAKE because ar is not replaced
 # by the cross compiling archiver and will cause the following error
