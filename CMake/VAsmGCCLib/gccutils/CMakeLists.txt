@@ -1,10 +1,11 @@
-project(asmutils ASM)
+project(gccutils)
 
 set(TARGET ${PROJECT_NAME}) 
 
+set(CMAKE_CXX_STANDARD 14)
+
 set(SOURCES
-	strlen.s
+    strlen.cpp
 )
 
-# Build as library
 add_library(${TARGET} STATIC ${SOURCES}) 

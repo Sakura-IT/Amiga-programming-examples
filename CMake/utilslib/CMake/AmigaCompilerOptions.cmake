@@ -31,7 +31,6 @@ endif("${CMAKE_BUILD_TYPE}" STREQUAL "")
 
 # Set compiler flags which should be kept for both C and C++.
 SET(COMMON_COMPILER_FLAGS "--save-temps -Wall -pedantic -mcrt=nix13")
-#SET(COMMON_COMPILER_FLAGS "--save-temps -Wall -pedantic -noixemul")
 
 set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} ${COMMON_COMPILER_FLAGS}")
 set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} ${COMMON_COMPILER_FLAGS}")
@@ -47,8 +46,6 @@ if("${CMAKE_BUILD_TYPE}" STREQUAL "Release")
 endif("${CMAKE_BUILD_TYPE}" STREQUAL "Release")  
 
 set(UTILSLIB_BUILD_TYPE "${CMAKE_BUILD_TYPE}")
-
-include(AmigaASMOptions)
 
 include_directories(${UTILSLIB_PATH})
 include_directories(${UTILSLIB_DIR})
