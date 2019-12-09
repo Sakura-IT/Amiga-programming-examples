@@ -1,17 +1,14 @@
-cmake_minimum_required(VERSION 3.10)
-
-set(UTILSLIB_PATH "${CMAKE_SOURCE_DIR}/.." CACHE STRING "Path to lib")
-set (UTILSLIB_DIR "${UTILSLIB_PATH}/utilslib") 
-set (CMAKE_MODULE_PATH "${CMAKE_MODULE_PATH};${UTILSLIB_DIR}/CMake") 
-include(AmigaCompilerOptions) 
-
-# **** PROJECT START ****
+cmake_minimum_required(VERSION 3.0) 
 project(VASMGcc)
-
-enable_language(VASM) 
-
-# **** PROJECT START ****
 set(TARGET ${PROJECT_NAME}) 
+
+find_package(AmigaUtils CONFIG REQUIRED)
+find_package(AmigaGCCUtils CONFIG REQUIRED)
+include(AmigaGCCProject)
+
+enable_language(AMIGA_VASM)
+
+set(CMAKE_CXX_FLAGS_DEBUG "${CMAKE_CXX_FLAGS_DEBUG} -O1")
 
 set(ASM_SOURCES
 	strlen.asm
@@ -23,8 +20,9 @@ set(SOURCES
 	${ASM_SOURCES}
 )
 
-set_source_files_properties(${ASM_SOURCES} PROPERTIES LANGUAGE VASM)
+set_source_files_properties(${ASM_SOURCES} PROPERTIES LANGUAGE AMIGA_VASM)
 
 add_executable(${TARGET} ${SOURCES}) 
+target_link_libraries(${TARGET} AmigaUtils AmigaGCCUtils)
 
 set(EXECUTABLE_OUTPUT_PATH ${CMAKE_BINARY_DIR}/bin)  

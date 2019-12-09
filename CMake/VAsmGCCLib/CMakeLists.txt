@@ -1,18 +1,21 @@
-cmake_minimum_required(VERSION 3.14)
-
-set(UTILSLIB_PATH "${CMAKE_SOURCE_DIR}/.." CACHE STRING "Path to lib")
-set (UTILSLIB_DIR "${UTILSLIB_PATH}/utilslib") 
-set (CMAKE_MODULE_PATH "${CMAKE_MODULE_PATH};${UTILSLIB_DIR}/CMake") 
-include(AmigaCompilerOptions) 
-
-# **** PROJECT START ****
-project(VASMGccLib)
+cmake_minimum_required(VERSION 3.0)
+project(VASMGccLibSample)
 
 set(TARGET ${PROJECT_NAME}) 
+
+find_package(AmigaUtils CONFIG REQUIRED)
+include(AmigaGCCProject)
+
+enable_language(AMIGA_VASM)
+
+set(CMAKE_CXX_FLAGS_DEBUG "${CMAKE_CXX_FLAGS_DEBUG} -O1")
 
 set(EXECUTABLE_OUTPUT_PATH ${CMAKE_BINARY_DIR}/bin)  
 set(LIBRARY_OUTPUT_PATH ${CMAKE_BINARY_DIR}/lib)
 
+include_directories(${CMAKE_SOURCE_DIR}/include)
+
 add_subdirectory(asmutils)
 add_subdirectory(gccutils)
 add_subdirectory(src)
+
