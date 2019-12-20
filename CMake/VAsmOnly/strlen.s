@@ -8,13 +8,13 @@
 ;
 ; #####################################################
 
-	xdef    strlen
+	include GCCLib.i
 
 strlen:
 	moveq.l #0,d0
     move.l  a0,d0
 
-.loop
+.loop:
 	tst.b   (a0)+
 	bne     .loop
 

@@ -8,11 +8,9 @@
 ;
 ; #####################################################
 
-	xdef    strlen
-	xdef    _ASMStrlen
+	include GCCLib.i
 
 _ASMStrlen:
-
 strlen:
 	moveq.l #0,d0
     move.l  a0,d0

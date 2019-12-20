@@ -1,8 +1,4 @@
-; Amiga programming example in assembler, using system calls.
-; "Hello World" using the default output (usually console)
-; Assembled with "vasmm68k_mot -kick1hunks -Fhunkexe -o test test.s"
-; Gerhard Gruber, 2019
-; Public Domain
+	include utils/hardware/custom_registers.i
 
 SysBase			= 4
 
@@ -20,8 +16,10 @@ Write			= -48
 
 	xref    strlen
 
-
 _start:
+	jsr		SystemSave
+	jsr		SystemRestore
+
 	lea		DosName,a1		; dos.library name string
 	moveq	#0,d0		; Should work with any version
 	movea.l	SysBase,a6
