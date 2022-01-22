@@ -1,0 +1,11 @@
+#!/bin/bash
+
+AMIGA_TOOLCHAIN=/opt/amiga
+
+export CC=amiga-gcc
+export CXX=amiga-g++
+export AR=amiga-ar
+
+export PATH=${AMIGA_TOOLCHAIN}/bin:${AMIGA_TOOLCHAIN}/utils:$PATH
+hash -r
+

@@ -1,0 +1,7 @@
+
+set(ASM_DIALECT "AMIGA_VASM")
+
+# No tests so far
+set(CMAKE_${ASM_DIALECT}_COMPILER_WORKS 1 CACHE INTERNAL "")
+			   
+set(ASM_DIALECT)
